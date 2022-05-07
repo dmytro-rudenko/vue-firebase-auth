@@ -1,0 +1,122 @@
+@import "~@/styles/_var.scss";
+
+.ion-color-danger {
+  --ion-color-base: var(--ion-color-danger, #ff114e) !important;
+}
+
+.ion-page {
+  --ion-font-family: $mon;
+}
+
+ion-item {
+  &.p-start-0 {
+    --padding-start: 0;
+  }
+}
+
+.button.ion-color-danger,
+.button.ion-color-primary {
+  margin-top: 15px;
+  --padding-top: 29px;
+  --padding-bottom: 29px;
+  border-radius: 5px;
+  --box-shadow: none;
+  text-transform: capitalize;
+  margin-inline: 0;
+}
+
+.button-outline {
+  font-size: 13px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  color: #b7b7b9;
+  width: 100%;
+  margin: 0;
+  height: 40px;
+  font-weight: 400;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --border-width: 1px;
+  --border-color: #cfcfd0;
+}
+
+ion-select {
+  padding: 2px 0 9px;
+  font-size: 14px;
+
+  &::part(text) {
+    color: $greyDark;
+    opacity: 0.4 !important;
+    font-weight: 500;
+  }
+
+  .select-text {
+    color: rgb(76, 76, 81);
+  }
+}
+
+ion-loading {
+  --background: #fff !important;
+  --spinner-color: #000 !important;
+
+  .loading-wrapper.sc-ion-loading-md {
+    box-shadow: 0 0 20px rgb(0 0 0 / 40%) !important;
+  }
+}
+
+.native-input.sc-ion-input-ios {
+  max-height: none;
+}
+
+ion-toggle {
+  padding: 0;
+  height: 26px;
+  width: 50px;
+  --background: #f8f8f8;
+  --background-checked: #ffdce5;
+  --handle-box-shadow: 0 0 3px 0 rgb(0 0 0 / 5%), 0 0 2px 0 rgb(0 0 0 / 10%);
+  --handle-width: 24px;
+  --handle-height: 24px;
+
+  --handle-background: #d5d5d5;
+  --handle-background-checked: var(--mainColor);
+}
+
+ion-list {
+  padding: 0 !important;
+}
+
+.button-icon {
+  --border-radius: 50%;
+  --padding-start: 0;
+  --padding-end: 0;
+}
+
+.string-solid {
+  height: auto;
+}
+
+.button-hidden {
+  --background: none;
+  --padding-start: 0;
+  --padding-end: 0;
+}
+
+.button-clear {
+  text-transform: capitalize;
+}
+
+@media only screen and (max-width: 320px) {
+  ion-router-outlet {
+    overflow-x: auto;
+  }
+
+  ion-router-outlet > * {
+    min-width: 320px;
+  }
+
+  ion-router-outlet ion-content::part(scroll),
+  .scroll-y {
+    touch-action: auto;
+  }
+}

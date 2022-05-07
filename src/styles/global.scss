@@ -1,0 +1,134 @@
+@import "~@ionic/vue/css/core.css";
+
+@import "~@ionic/vue/css/normalize.css";
+@import "~@ionic/vue/css/structure.css";
+@import "~@ionic/vue/css/typography.css";
+
+@import "~@/styles/_var.scss";
+@import "~@/styles/_ion.scss";
+
+@import "~@/assets/fonts/Montserrat/Montserrat.scss";
+
+* {
+  font-family: "Montserrat", sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  display: block !important;
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+
+.mainContainer {
+  position: relative;
+  padding: 0;
+  height: 100vh;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.overflowHidden {
+  overflow: hidden;
+}
+
+.content {
+  padding-bottom: 77px;
+}
+
+/*----------select popover----------*/
+.Popover-select-option {
+  --max-width: 610px !important;
+  --width: 100% !important;
+  overflow-y: auto;
+  @media only screen and (max-width: 679px) {
+    --width: 85% !important;
+  }
+
+  .item-radio-checked {
+    --background: var(--mainColor);
+    --color: #fff;
+    --font-family: $mon;
+  }
+
+  .sc-ion-select-popover {
+    margin: 0 !important;
+    padding: 0;
+  }
+
+  .in-item {
+    opacity: 0;
+  }
+}
+
+/*----------Стрелка вниз у селектов----------*/
+.formArrowDown {
+  position: absolute;
+  right: 15px;
+  top: calc(50% - 6px);
+  width: 9px;
+  height: 12px;
+  object-fit: contain;
+}
+
+/*----------Убрать стрелку у селекта----------*/
+.noArrow {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.alert {
+  .alert-head {
+    text-align: center;
+  }
+
+  --max-width: 430px;
+  --width: 100%;
+
+  @media only screen and (max-width: 480px) {
+    --max-width: 90%;
+  }
+
+  .alert-button-group {
+    .alert-button {
+      &:last-child {
+        span {
+          color: $pink;
+        }
+      }
+    }
+  }
+}
+
+.loader {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
